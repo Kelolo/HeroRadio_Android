@@ -1,0 +1,10 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cz264.heroradio.Fragments.StationFragment"
+    android:background="@android:color/holo_blue_bright">
+
+    <include layout="@layout/content_stations_recycler" />
+
+</FrameLayout>

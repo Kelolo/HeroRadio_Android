@@ -3,6 +3,7 @@ package com.example.cz264.heroradio.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +61,15 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View v = inflater.inflate(R.layout.fragment_main, container, false);
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        StationFragment stationFragment1 = StationFragment.newInstance("b", "b");
+        StationFragment stationFragment2 = StationFragment.newInstance("b", "b");
+        StationFragment stationFragment3 = StationFragment.newInstance("b", "b");
+        fm.beginTransaction().add(R.id.container_TopRow, stationFragment1);
+        fm.beginTransaction().add(R.id.container_MidRow, stationFragment2);
+        fm.beginTransaction().add(R.id.container_BotRow, stationFragment3);
+        return v;
     }
 
 }
