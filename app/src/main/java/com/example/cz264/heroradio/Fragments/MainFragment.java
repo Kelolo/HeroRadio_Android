@@ -63,9 +63,9 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
         FragmentManager fm = getActivity().getSupportFragmentManager();
-        StationFragment stationFragment1 = StationFragment.newInstance("b", "b");
-        StationFragment stationFragment2 = StationFragment.newInstance("b", "b");
-        StationFragment stationFragment3 = StationFragment.newInstance("b", "b");
+        StationFragment stationFragment1 = StationFragment.newInstance(StationFragment.STATION_TYPE_FEATURED);
+        StationFragment stationFragment2 = StationFragment.newInstance(StationFragment.STATION_TYPE_RECENT);
+        StationFragment stationFragment3 = StationFragment.newInstance(StationFragment.STATION_TYPE_PARTY);
         fm.beginTransaction().add(R.id.container_TopRow, stationFragment1);
         fm.beginTransaction().add(R.id.container_MidRow, stationFragment2);
         fm.beginTransaction().add(R.id.container_BotRow, stationFragment3);
